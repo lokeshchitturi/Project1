@@ -19,7 +19,7 @@ public class Test1 {
 
 	@Test
 	public void test1() throws Exception {
-		System.out.println("Hello Namastey");
+		System.out.println("Hello Namaste");
 
 		String name = "Lokesh";
 		int age = 30;
