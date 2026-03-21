@@ -1,5 +1,6 @@
 package sample1;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -19,6 +20,11 @@ public class Test1 {
 
 	@Test
 	public void test1() throws Exception {
+		
+		File dir = new File("target/test-output");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
 		System.out.println("Hello Namaste");
 
 		String name = "Lokesh";
