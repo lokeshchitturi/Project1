@@ -47,5 +47,4 @@ public class Test1 {
 
 		System.out.println("Data saved successfully");
 	}
-
-}
+	
