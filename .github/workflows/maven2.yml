@@ -1,35 +1,22 @@
-name: Maven CI
+name: Run TestCase2 After Delay
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch:  # allows manual or API trigger
 
 jobs:
-  build:
+  read-job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Build and Run Tests
-        run: mvn -Dtest=sample1.TestCase2 test
-
-      - name: Debug logs
-        run: ls -R
-
-      - name: Upload All Outputs
-        uses: actions/upload-artifact@v4
+      - uses: actions/download-artifact@v4
         with:
           name: test-artifacts
-          path: |
-            target/surefire-reports/
-            target/test-output/
+          path: target
+
+      - run: mvn -Dtest=sample1.TestCase2 test
