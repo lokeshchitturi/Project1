@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class Test2 {
+public class TestCase2 {
 	
 	  @Test
 	    public void testReadFile() throws Exception {

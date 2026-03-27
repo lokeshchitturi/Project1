@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build and Run Tests
-        run: mvn -Dtest=Test2 test
+        run: mvn -Dtest=sample1.TestCase2 test
 
       - name: Debug logs
         run: ls -R

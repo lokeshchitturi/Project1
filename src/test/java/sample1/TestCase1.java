@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 
 
 
-public class Test1 {
+public class TestCase1 {
 
 	@Test
 	public void test1() throws Exception {
@@ -48,3 +48,4 @@ public class Test1 {
 		System.out.println("Data saved successfully");
 	}
 	
+}
