@@ -22,11 +22,10 @@ jobs:
 
       - name: Build and Run Tests
         run: mvn clean test
-		
-	  - name: debug logs
-		run: ls -R	
 
-      # Upload both reports + your file
+      - name: Debug logs
+        run: ls -R
+
       - name: Upload All Outputs
         uses: actions/upload-artifact@v4
         with:
