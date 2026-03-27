@@ -30,6 +30,8 @@ public class Test1 {
 		String name = "Lokesh";
 		int age = 30;
 		double score = 89.5;
+		
+		
 		String status = "PASS";
 		String timestamp = String.valueOf(System.currentTimeMillis());
 
