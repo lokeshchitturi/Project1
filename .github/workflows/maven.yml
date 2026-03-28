@@ -20,8 +20,8 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Build and Run Tests
+      - name: Run TestCase1 (write file)
         run: mvn -Dtest=sample1.TestCase1 test
-		
-	  - name: Run TestCase2 (read file)
-		run: mvn -Dtest=sample1.TestCase2 test
+
+      - name: Run TestCase2 (read file)
+        run: mvn -Dtest=sample1.TestCase2 test
