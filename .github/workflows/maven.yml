@@ -22,14 +22,6 @@ jobs:
 
       - name: Build and Run Tests
         run: mvn -Dtest=sample1.TestCase1 test
-
-      - name: Debug logs
-        run: ls -R
-
-      - name: Upload All Outputs
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-artifacts
-          path: |
-            target/surefire-reports/
-            target/test-output/
+		
+	  - name: Run TestCase2 (read file)
+		run: mvn -Dtest=sample1.TestCase2 test
